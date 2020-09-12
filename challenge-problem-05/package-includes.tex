@@ -1,0 +1,84 @@
+\usepackage[nolist,nohyperlinks]{acronym}
+\RequirePackage[top=0.5in,bottom=0.8in,left=0.8in,right=0.8in]{geometry}
+\usepackage{nopageno}
+\usepackage[T1]{fontenc}
+\usepackage[switch]{lineno}
+\usepackage{lmodern}
+
+% Formatting (Math)
+\usepackage{pgffor}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb,amsthm,amsbsy,amsfonts,dotlessj} 
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{etoolbox}
+\usepackage{circuitikz}
+\newsavebox\ltmcbox
+
+% Figure setup
+\usepackage{floatrow}
+\usepackage{subfig}
+\floatsetup[figure]{style=plain,subcapbesideposition=top}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+
+% Code snippets
+\usepackage{hyperref}
+\usepackage{listings}
+\lstloadlanguages{Matlab}
+\lstset{language=Matlab,
+                   frame = single, % Single frame around code
+               linewidth = 0.9\textwidth,
+             xleftmargin = 0.1\textwidth,
+              basicstyle = \scriptsize\ttfamily,
+            keywordstyle = [3]\Color{blue}\underbar, % Custom functions underlined and blue
+         identifierstyle = , % Nothing special about identifiers
+            commentstyle = \usefont{T1}{pcr}{m}{sl}\color{olive},
+             stringstyle = \color{green},
+        showstringspaces = false, % Don't put marks in string spaces
+                 tabsize = 4, % 5 spaces per tab
+        % Put standard functions not included in the default language here
+        morekeywords={zeros},
+        % Put function parameters here
+        morekeywords=[2]{compute, Obj, interp},
+        % Put user defined functions here
+        morekeywords=[3]{test},
+        %
+        % numbers=left, % Line numbers on left
+        firstnumber=1, % Line numbers start with line 1
+        numberstyle=\tiny\color{blue}, % Line numbers are blue and small
+        stepnumber=5 % Line numbers go in steps of 5
+}
+
+
+% Citations and references
+\usepackage[nameinlink,capitalize]{cleveref}
+\usepackage{natbib}
+
+% Graphics
+\usepackage{tikz}
+\usetikzlibrary{patterns,arrows,shapes.geometric}
+
+\usepackage{graphicx}
+\usepackage{float}
+\graphicspath{{./Figures/}}
+\DeclareGraphicsExtensions{.eps,.pdf,.jpg,.png,.svg}
+
+% These two package provide another way of doing subcaptions but do not support caption labels on the side.
+% \usepackage[footnotesize,bf]{caption}
+% \usepackage{subcaption}
+
+\usepackage{epstopdf}
+\usepackage{wrapfig}
+% \usepackage[footnotesize,center]{subfigure}
+
+% Annotations, notes, etc.
+\usepackage{fixme}
+\usepackage[color=green!80]{todonotes}
+
+\robustify{\subref}
+% Reset acronyms at the beginning of each chapter
+% \usepackage{etoolbox}
+% \preto\section\acresetall

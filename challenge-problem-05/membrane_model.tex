@@ -1,0 +1,32 @@
+\begin{figure}[H]
+    \begin{circuitikz}[american currents]
+        \draw (0,0)
+        to[C,label=$C$] (0,4)
+        to[short,-] (8,4)
+        to[short,-*] (8,2.5);
+        \draw (8,1.75)
+        node[below,label=$V_{m}$];
+        \draw (4,0) -- (4,0) node[ground] {}
+        to[short,-] (0,0);
+        \draw (4,0)
+        to[short,-] (8,0)
+        to[short,-*] (8,1.5);
+        \draw (2,4)
+        to[R=$G_{Na}$] (2,2)
+        to[battery, l=$V_{Na}$] (2,0);
+        \draw (4,4)
+        to[R=$G_{K}$] (4,2)
+        to[battery, l=$V_{K}$] (4,0);
+        \draw (6,4)
+        to[R=$G_{Cl}$] (6,2);
+        \draw (6,0)
+        to[battery, l_=$V_{Cl}$] (6,2);
+        \draw (0,0)
+        to[short,-] (-2,0)
+        to[I,i=$I_{s}$] (-2,4) -- (-2,4)
+        to[short,-] (0,4);
+    \end{circuitikz}
+    \caption{\label{fig:membrane_capacitor_model}
+        Electrical model of membrane potential of a single neuron.
+    }
+\end{figure}
