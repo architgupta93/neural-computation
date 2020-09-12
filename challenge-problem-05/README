@@ -1,0 +1,5 @@
+The main class that implements the model can be found in membrane_model.m
+
+1. Solution to the differential equation over time can be found in the file membrane_simulation.m
+
+2. Analysis of synaptic inputs can be found in synaptic_input.m
