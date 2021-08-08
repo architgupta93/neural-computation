@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+
+\bibitem{oja2006fastica}
+Erkki Oja and Zhijian Yuan.
+\newblock The fastica algorithm revisited: Convergence analysis.
+\newblock {\em IEEE Transactions on Neural Networks}, 17(6):1370--1381, 2006.
+
+\bibitem{hyvarinen1999fast}
+Aapo Hyvarinen.
+\newblock Fast and robust fixed-point algorithms for independent component
+  analysis.
+\newblock {\em IEEE transactions on Neural Networks}, 10(3):626--634, 1999.
+
+\end{thebibliography}

@@ -1,0 +1,87 @@
+\documentclass[10pt,onecolumn]{article}
+% Package includes handled in a separate file
+\title{VS265 Problem 13: Why spikes?}
+\author{Archit Gupta}
+\date{}
+\input package-includes
+\input acronyms
+\begin{document}
+    \maketitle
+    \vspace{-2em}
+    \noindent\rule{\textwidth}{1.4pt}
+    \vspace{1em}
+
+    \section*{Problem description}
+    \label{sec:problem_description}
+
+    The \ac{CNS} in vast majority of animals employs action potentials or spikes as the primary mode of communication.
+    In this challenge problem, we discuss some of the biological constraints that might have made spiking necessary.
+    We also compare the \ac{CNS} of simpler organisms like \textit{C. Elegans} which do not employ spikes.
+
+    \section*{Essay}
+    \label{sec:essay}
+
+    Before we take a mechanistic view towards computation and signaling in the brain, we need to discuss the role that the brain, or \ac{CNS} at large plays in an organism's existence.
+    In~\cite{sterling2015principles}, the authors discuss the role of a computational organ, or more generally computational units in different organisms.
+    A brain serves to aggregate sensory information that is relevant to an animal's behavior and then, having processed the sensory information, it facilitates actions in the animal's behavioral repertoire.
+    We also learn from~\cite{sterling2015principles} that larger animals are able to move faster which in turn allows them to explore and exploit their environment to a greater extent.
+    As the complexity of actions and computational processing increases, information undergoes multiple levels of processing (for example in the human visual stream~\cite{felleman1991distributed}).
+    Under these circumstances, the reliability, speed and bandwidth of information transfer become vital.
+    We next look at some of these ideas
+    \begin{enumerate}
+        \item How can we reliably transfer information - the case for continuous signals \textit{vs.} discrete packets of information.
+        \item Signaling over long distances - For larger organisms, information should propagate from the extremities to the brain and vice-versa at a behaviorally relevant timescale.
+        \item The information transfer rate, or bandwidth, should be high enough to cope with the sensory modalities and behavioral demands of the animal,
+        \item Energy spent in performing these operations, and the trade-off between energy expenditure and existential benefits?
+    \end{enumerate}
+
+    \subsection*{Continuous \textit{vs.} Discrete signaling}
+    \label{sec:continuous_vs_discrete_signaling}
+    The debate on continuous \textit{vs.} discrete signals as a substrate for computation has raged in the computational world for much of the last century.
+    A single memory or computational unit carries more information as a continuous signal, than a discrete one.
+    However, in the presence of noise, using more computational or memory units and a discrete (say binary) representation is more resilient to noise.
+    The biological substrate for computation and signaling consists of ion channels and chemical pathways which are inherently stochastic in nature.
+    Because of the small volume of molecules involved in individual computations, the \ac{SNR} is often low for individual computational units.
+    This makes a discrete signal representation a better choice.
+
+    \subsection*{Propagating signals over long distances}
+    \label{sec:propagating_signals_over_long_distances}
+
+    Electrical models of transmission lines suggest that when propagated over long distances, continuous-time signals suffer from dispersion and attenuation~\cite{roychowdhury1991efficient}.
+    In the presence of noise, the signal quality is further degraded.
+    Several organisms, mammals in particular, have grown to immense proportions.
+    The spinal cord of a Giraffe can be upto $2.6$m long~\cite{badlangana2007observations}.
+    Signals from the brain to motor neurons must travel long distances.
+    In that regard, discrete packets like action potentials are less susceptible to attenuation and dispersion and therefore, more reliable for information exchange.
+
+    \subsection*{Capturing rapidly changing information}
+    \label{sec:capturing_rapidly_changing_information}
+
+    Our discussion so far suggests that discrete signals can more reliably communicate information from sensory areas and commands to motor areas.
+    Organisms often need to adapt to fast changing environmental variables like sight and sound.
+    In order to cope with fast changing environmental input, neurons must be able to operate at higher frequencies.
+    This necessitates a short packet of information which can then be repeated at a fast time scale in order to convey more than all-or-none information.
+    Trains of action potentials, or spike trains efficiently accomplish this.
+    In~\cite{mainen1995reliability}, the authors show that spike timing (or inter-spike intervals) can effectively capture fluctuations in the inputs.
+
+    \subsection*{The case for simpler organisms}
+    \label{sec:the_case_for_simpler_organisms}
+    Let us take the case of a simpler organism.
+    C. Elegans can grow upto $1.5$mm long~\cite{riddle1997introduction}.
+    Further, they lack a centralized organ like the brain where all sensory information is collected and processed.
+    Instead, collection of sensory information and computations that lead to motor or chemical actions are often performed locally.
+    The sensory information that C. Elegans primarily encounter, like chemical concentrations and temperature gradients usually do not change rapidly with time.
+    Because of that, slower computational processes are sufficient for the organism to be able to react to sensory information in time.
+    Since the computational demands and the behavioral repertoire of this simpler organism are much limited, it does not need to expend energy in producing high-frequency actions potentials.
+
+    \section*{Summary}
+    \label{sec:summary}
+    We discussed four major factors that need to be assessed in neural design - reliability, speed, bandwidth and energy expenditure.
+    As the complexity of an animal and its behavioral demands increase, it can spend more energy and utilize spikes for more reliable and faster signaling.
+    On the other hand, when the animal complexity and behavioral demands are low, simpler signaling mechanisms can be used.
+
+    \setlength{\bibsep}{2pt}
+    \bibliographystyle{unsrt}
+    \footnotesize
+    \bibliography{citations.bib}
+\end{document}

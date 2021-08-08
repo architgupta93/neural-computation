@@ -1,0 +1,36 @@
+\begin{thebibliography}{1}
+
+\bibitem{sterling2015principles}
+Peter Sterling and Simon Laughlin.
+\newblock {\em Principles of neural design}.
+\newblock MIT Press, 2015.
+
+\bibitem{felleman1991distributed}
+Daniel~J Felleman and David~C Van~Essen.
+\newblock Distributed hierarchical processing in the primate cerebral cortex.
+\newblock In {\em Cereb cortex}. Citeseer, 1991.
+
+\bibitem{roychowdhury1991efficient}
+Jaijeet~S Roychowdhury and Donald~O Pederson.
+\newblock Efficient transient simulation of lossy interconnect.
+\newblock In {\em Proceedings of the 28th ACM/IEEE Design Automation
+  Conference}, pages 740--745, 1991.
+
+\bibitem{badlangana2007observations}
+NL~Badlangana, A~Bhagwandin, K~Fuxe, and PR~Manger.
+\newblock Observations on the giraffe central nervous system related to the
+  corticospinal tract, motor cortex and spinal cord: what difference does a
+  long neck make?
+\newblock {\em Neuroscience}, 148(2):522--534, 2007.
+
+\bibitem{mainen1995reliability}
+Zachary~F Mainen and Terrence~J Sejnowski.
+\newblock Reliability of spike timing in neocortical neurons.
+\newblock {\em Science}, 268(5216):1503--1506, 1995.
+
+\bibitem{riddle1997introduction}
+Donald~L Riddle, Thomas Blumenthal, Barbara~J Meyer, and James~R Priess.
+\newblock Introduction to c. elegans--c. elegans ii.
+\newblock 1997.
+
+\end{thebibliography}
